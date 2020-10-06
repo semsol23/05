@@ -5,23 +5,22 @@
 
 int main(int argc, char *argv[]) {
 	
-	int answer = 59;
-	int i, trial=0;
+	int a, b, result;
+	char op;
 	
-	do
-	{
-		printf("input a number : ");
-		scanf("%i", &i);
-		
-		if (answer > i)
-			printf("low!\n");
-		else if (answer <i)
-			printf("high!\n");
-			
-		trial++;
-	} while(i != answer);
+	printf("enter the calculation : ");
+	scanf("%d%c%d", &a, &op, &b);
 	
-	printf("congratulation, number of trial : %i\n", trial);
+	if (op == '+')
+		result = a+b;
+	else if (op == '-')
+		result = a-b;
+	else if (op == '*')
+		result = a*b;
+	else 
+		result = a/b;
+	
+	printf("%d%c%d = %d", a, op ,b, result);
 	
 	return 0;
 }
